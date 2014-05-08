@@ -1,0 +1,8 @@
+.classpath
+.project
+.settings
+build
+password
+target
+src/main/webapp/WEB-INF/lib
+src/main/resource
