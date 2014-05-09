@@ -75,6 +75,7 @@ public class AuthorizationServerEndpointsConfiguration {
 	@Autowired
 	private List<AuthorizationServerConfigurer> configurers = Collections.emptyList();
 	
+	/** Modificacao Raoni **/
 	@Autowired
 	private DataBaseConfig dataBaseConfig;
 	
@@ -87,6 +88,8 @@ public class AuthorizationServerEndpointsConfiguration {
 			configurer.configure(endpoints);
 		}
 		endpoints.clientDetailsService(clientDetailsService);
+		
+		/** Modificacao Raoni **/
 		endpoints.setDataSource(dataBaseConfig.dataSource());
 		endpoints.setbCryptPasswordEncoder(securityConfig.encoder());
 	}
